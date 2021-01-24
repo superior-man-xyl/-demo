@@ -1,0 +1,16 @@
+{
+  "name": "wechatAPP-mall",
+  "version": "1.0.0",
+  "description": "- 前端框架  vant\r 步骤：\r 1.使用npm init -y 加入后端，初始化下，以安装第三方插件\r 2.npm i @vant/weapp -s --production  安装来自有赞的框架vant，有赞来自微信生态得为长\r 3.在微信开发者工具页面，点击工具，选择构建npm，就会在文件中生成个miniprogram_npm文件夹,这里的东西能直接引入（\"van-button\":\"@vant/weapp/button/index\"）不需要相对地址",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.6.6",
+    "apifm-wxapi": "^3.32.0"
+  }
+}
