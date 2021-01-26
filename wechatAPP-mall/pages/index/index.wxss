@@ -1,21 +1,68 @@
-/**index.wxss**/
-.userinfo {
+.header{
+  background-color: black;
+}
+.banners_big{
+  width:100%;
+    height: 375rpx;
+  }
+.banners_big-img{
+  width:100%;
+  height:100%;
+}
+.tonzhi {
+  height: 50rpx;
+  margin: 20rpx auto;
+  display: flex;
+  justify-self: start;
+}
+.tonzhi-sw{
+  flex: 1;
+  color:red;
+  font-size: small;
+  padding-left: 30rpx;
+  height: 100%;
+}
+.notice_icon{
+  margin-left: 20rpx;
+  width: 30rpx;
+  height: 30rpx;
+}
+.category-box{
+  width: 100%;
+  height: 320rpx;
+  /* background-color: red; */
+  display: flex;
+  flex-wrap: wrap;
+  padding:15rpx 20rpx;
+  padding-right: 30rpx;
+}
+/* .category-list{
+  width: 100%;
+} */
+.category-column{
+  margin-top: 10rpx;
+  height: 150rpx;
+  width: 150rpx;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.category-imgbox{
+  display: block;
+  margin-left:25rpx;
+  height: 82rpx;
+  width: 82rpx;
+ 
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.category-title{
+  text-align: center;
 }
-
-.usermotto {
-  margin-top: 200px;
+.guangao image{
+  display: block;
+  width: 100%;
+  height: 280rpx;
+}
+.img-1{
+  display:block;
+  width: 134rpx;
+  height: 134rpx;
 }

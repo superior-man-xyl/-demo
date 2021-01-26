@@ -1,7 +1,7 @@
 {
-  "pages":[
+  "pages":["pages/index/index",
     "pages/start/start",
-    "pages/index/index",
+    
     "pages/category/category",
     "pages/coupons/index",
     "pages/shop-cart/index",
@@ -10,8 +10,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "",
+    "navigationBarBackgroundColor": "#4fc08d",
+    "navigationBarTitleText": "买它商城",
     "navigationBarTextStyle":"black",
     "onReachBottomDistance": 50,
     "backgroundColor": "#f5f5f5"

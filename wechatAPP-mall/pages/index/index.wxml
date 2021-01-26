@@ -3,8 +3,43 @@
   value="{{ value }}"
   placeholder="请输入搜索关键词"
   show-action
+  background="#4fc08d"
   bind:search="onSearch"
   bind:cancel="onCancel"
-/>
+/>      
+<swiper class="banners_big" circular="true" indicator-dots="true" indicator-color="white" indicator-active-color="red" interval="500">
+<swiper-item>
+<image class="banners_big-img" src="https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/165127/17/4026/267270/600cd1f5Ea8d0f5a4/87d69fd126aa75cd.jpg!cr_1125x445_0_171!q70.jpg.dpg"></image>
+</swiper-item>
+<swiper-item>
+<image class="banners_big-img" src="https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/161521/24/4209/179827/600e778bE5b5de3a9/1145c237a8af5c9f.jpg!cr_1125x445_0_171!q70.jpg.dpg"></image>
+</swiper-item>
+<swiper-item>
+<image class="banners_big-img" src="https://imgcps.jd.com/ling4/68061564941/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/p-5c1361ed82acdd181dd72188/0f5bac90/cr_1125x445_0_171/s1125x690/q70.jpg"></image>
+</swiper-item>
+<swiper-item>
+<image class="banners_big-img" src="https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/158751/36/5294/65964/600e751dE3d32995c/605b1c41c8720d61.jpg!q70.jpg.dpg"></image>
+</swiper-item>
+</swiper>          
+</view>
+<view class="tonzhi"> 
+  <image class="notice_icon" src="/images/notice.png"></image>
+  <swiper class="tonzhi-sw"  interval="500" circular="true">
+    <swiper-item>商城正式营业，优惠多多不容错过!</swiper-item>
+    <swiper-item>乐享包邮，优惠到家!</swiper-item>
+  </swiper>
+</view>
+<view class="category-box">
+  <view class="category-list" wx:for="{{categories}}" wx:key="id">
+    <view class="category-column" bindtap="tabClick" data-id="{{item.id}}">
+      <image mode="aspectFill" class="category-imgbox" src="{{item.icon}}"></image>
+      <view class="category-title">{{item.name}}</view>
+    </view>          
+  </view>
+</view>
+<view class="guangao">
+  <image src="https://m.360buyimg.com/mobilecms/jfs/t1/165132/5/4143/114646/600ec845Edd4f226d/757170d6ba96dc34.gif"></image>
+  <image class="img-1" src="https://m.360buyimg.com/n1/jfs/t163/22/1141765044/619582/ca2d86ac/53a4c9cbN3d604e3f.jpg!q70.jpg"></image>
+  <image class="img-1" src="https://m.360buyimg.com/n1/jfs/t1/71277/3/3325/101053/5d19fda1E7cc8eaf0/5d84d6a4f8f75fb8.jpg!q70.jpg"></image>
 </view>
 
