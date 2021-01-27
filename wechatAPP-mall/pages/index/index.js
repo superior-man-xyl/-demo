@@ -4,6 +4,15 @@ const WXAPI = require('apifm-wxapi');
 var app=getApp();
 Page({
   data: {
+    goods:[],
+    card:{
+      url:"https://img10.360buyimg.com/n2/s270x270_jfs/t1/75572/39/13588/104123/5daed490E55449cb4/fe92c5e13320b54a.jpg!q70.dpg",
+      name:"【三双装】Nike耐克袜子",
+      minPrice:69,
+      numberOrders:9000,
+      numberSells:10000,
+      id:1
+    },
     categories:[
       {
         id:0,
@@ -59,8 +68,24 @@ Page({
       url: '../logs/logs'
     })
   },
+  onSearch(){
+    wx.navigateTo({
+      url: '/pages/search-result/search-result',
+    })
+  },
   onLoad() {
-    
+    // const res =WXAPI.goods(); //使用WXAPI里的goods数据
+    // console.log(res);
+    // this.setData({
+    //   goods: res.data
+    // })
+    WXAPI.goods().then(res => {
+      if (res.code == 0) {
+        this.setData({
+          goods: res.data
+        })
+      }
+    })
   },
   getUserInfo(e) {
     console.log(e)

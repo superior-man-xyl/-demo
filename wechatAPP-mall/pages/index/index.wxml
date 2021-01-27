@@ -1,13 +1,17 @@
 <view class="header">
-<van-search
+<view class="van-search" bindtap="onSearch">
+<van-search 
   value="{{ value }}"
   placeholder="请输入搜索关键词"
   show-action
   background="#4fc08d"
-  bind:search="onSearch"
   bind:cancel="onCancel"
-/>      
-<swiper class="banners_big" circular="true" indicator-dots="true" indicator-color="white" indicator-active-color="red" interval="500">
+/>   
+</view>
+<view class="zero">
+</view>
+   
+<swiper class="banners_big" circular="true" indicator-dots="true" indicator-color="white" indicator-active-color="red" autoplay="true" interval="2000" duration="500">
 <swiper-item>
 <image class="banners_big-img" src="https://m.360buyimg.com/mobilecms/s700x280_jfs/t1/165127/17/4026/267270/600cd1f5Ea8d0f5a4/87d69fd126aa75cd.jpg!cr_1125x445_0_171!q70.jpg.dpg"></image>
 </swiper-item>
@@ -24,7 +28,7 @@
 </view>
 <view class="tonzhi"> 
   <image class="notice_icon" src="/images/notice.png"></image>
-  <swiper class="tonzhi-sw"  interval="500" circular="true">
+  <swiper class="tonzhi-sw" autoplay="true" interval="2500" duration="50" circular="true">
     <swiper-item>商城正式营业，优惠多多不容错过!</swiper-item>
     <swiper-item>乐享包邮，优惠到家!</swiper-item>
   </swiper>
@@ -39,7 +43,39 @@
 </view>
 <view class="guangao">
   <image src="https://m.360buyimg.com/mobilecms/jfs/t1/165132/5/4143/114646/600ec845Edd4f226d/757170d6ba96dc34.gif"></image>
-  <image class="img-1" src="https://m.360buyimg.com/n1/jfs/t163/22/1141765044/619582/ca2d86ac/53a4c9cbN3d604e3f.jpg!q70.jpg"></image>
-  <image class="img-1" src="https://m.360buyimg.com/n1/jfs/t1/71277/3/3325/101053/5d19fda1E7cc8eaf0/5d84d6a4f8f75fb8.jpg!q70.jpg"></image>
 </view>
-
+<view class="float-img">
+  <swiper class="img-1" autoplay="true" interval="2550" duration="530" circular="true">
+    <swiper-item><image class="img-1" src="https://m.360buyimg.com/n1/jfs/t163/22/1141765044/619582/ca2d86ac/53a4c9cbN3d604e3f.jpg!q70.jpg"></image></swiper-item>
+    <swiper-item><image class="img-1" src="https://m.360buyimg.com/n1/jfs/t1/71277/3/3325/101053/5d19fda1E7cc8eaf0/5d84d6a4f8f75fb8.jpg!q70.jpg"></image></swiper-item>
+  </swiper>
+  <swiper class="img-1"autoplay="true" interval="2630" duration="500" circular="true">
+    <swiper-item><image class="img-1" src="https://m.360buyimg.com/n1/jfs/t1/71277/3/3325/101053/5d19fda1E7cc8eaf0/5d84d6a4f8f75fb8.jpg!q70.jpg"></image></swiper-item>
+    <swiper-item><image class="img-1" src="https://m.360buyimg.com/n1/jfs/t163/22/1141765044/619582/ca2d86ac/53a4c9cbN3d604e3f.jpg!q70.jpg"></image></swiper-item>
+  </swiper>
+</view>
+<view  class="list2-box">
+  <view class="list2" wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9,10,11,12,13,14,15,16,17,18]}}">
+    <navigator url="/pages/search-result/detail/detail?id={{item.id}}"><image class="img" mode="aspectFill" src="{{card.url}}"></image></navigator>
+    <view class="goods-info">
+      <view class="title"><navigator url="/pages/search-result/detail/detail?id={{item.id}}">{{card.name}}</navigator></view>
+      <view class="price">¥ {{card.minPrice}}</view>
+      <view class="buy-info">
+        <view class="num">{{card.numberOrders}}人已购{{card.numberSells}}件</view>
+        <image class="car" src="/images/images/icon/car.svg" data-id="{{card.id}}" bindtap="addShopCar"></image>
+      </view>
+    </view>
+  </view>
+  
+  <view class="list2" wx:for="{{goods}}" wx:key="id">
+    <navigator url="/pages/search-result/detail/detail?id={{item.id}}"><image class="img" mode="aspectFill" src="{{item.pic}}"></image></navigator>
+    <view class="goods-info">
+      <view class="title"><navigator url="/pages/search-result/detail/detail?id={{item.id}}">{{item.name}}</navigator></view>
+      <view class="price">¥ {{item.minPrice}}</view>
+      <view class="buy-info">
+        <view class="num">{{item.numberOrders}}人已购{{item.numberSells}}件</view>
+        <image class="car" src="/images/images/icon/car.svg" data-id="{{item.id}}" bindtap="addShopCar"></image>
+      </view>
+    </view>
+  </view>
+</view>
