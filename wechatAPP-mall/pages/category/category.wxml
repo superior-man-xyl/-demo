@@ -1,2 +1,78 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<van-search value="{{ value }}" placeholder="请输入搜索关键词" />
+<view class="category">
+<van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+  <van-sidebar-item title="热门推荐" />
+  <van-sidebar-item title="手机数码" />
+  <van-sidebar-item title="电脑办公" />
+  <van-sidebar-item title="家用电器" />
+  <van-sidebar-item title="计生情趣" />
+  <van-sidebar-item title="美妆护肤" />
+  <van-sidebar-item title="个护清洁" />
+  <van-sidebar-item title="汽车生活" />
+  <van-sidebar-item title="买它超市" />
+  <van-sidebar-item title="运动户外" />
+</van-sidebar>
+<view wx:if="{{detail==0}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods0}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==1}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods1}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==2}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods2}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==3}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods3}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==4}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods4}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==5}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods5}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==6}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods6}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==7}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods7}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==8}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods8}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+<view wx:elif="{{detail==9}}">
+  <van-grid gutter="{{ 10}}" column-num="3" center="true" icon-size="90rpx">
+  <!-- 通过gutter属性设置格子之间的距离 -->
+  <van-grid-item  wx:for="{{goods9}}" icon="{{item.img}}" text="{{item.name}}"/>
+</van-grid>
+</view>
+</view>
+<!-- <view>{{detail}}</view> -->
+
