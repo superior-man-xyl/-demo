@@ -1,0 +1,18 @@
+<!--components/Tabs/Tabs.wxml-->
+<view calss="tabs">
+  <view class="tabs_title">
+    <!-- <view class="titles_item active">要闻</view>
+    <view class="titles_item">推荐</view>
+    <view class="titles_item">原创</view>
+    <view class="titles_item">热点</view> -->
+    <!-- 上面的做法不够好。写死了，影响了组件的复用性 且不利于实现功能-->
+    <view wx:for="{{tabs}}" wx:key="id" class="titles_item {{item.isActive?'active':''}}" bindtap="handleItemTab" data-index="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+  <view class="tabs_content">
+    <!-- <slot> 元素 ，作为 Web Components 技术套件的一部分，是Web组件内的一个占位符。
+      该占位符可以在后期使用自己的标记语言填充，这样您就可以创建单独的页面元素，或将它与其它的组件组合在一起。 -->
+    <slot></slot>
+    </view>
+</view>

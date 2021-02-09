@@ -1,0 +1,7 @@
+<!-- 方式一 -->
+<Tabs tabs="{{tabs}}" binditemChange="handleItemChange" >
+  <block wx:if="{{tabs[0].isActive}}"><view class="content">0</view></block>
+  <block wx:if="{{tabs[1].isActive}}"><view class="content">1</view></block>
+  <block wx:if="{{tabs[2].isActive}}"><view class="content">2</view></block>
+  <block wx:if="{{tabs[3].isActive}}"><view class="content">3</view></block>
+</Tabs>
