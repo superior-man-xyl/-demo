@@ -1,0 +1,21 @@
+/* pages/grid/grid.wxss */
+.container{
+  height: 100vh;/*vh相对高度*/
+  display: grid;/*启动网格布局，写一个九宫格*/
+  justify-content: center;
+  align-content: center;/*flex align-items*/
+  grid-template-columns: 100rpx 100rpx 100rpx;/*每列宽度*/
+  /* grid-template-rows: 100rpx 100rpx 100rpx;每行高度 */
+}
+.item{
+  height: 100rpx;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.item:nth-child(odd){
+  background-color: red;
+}
+.item:nth-child(even){
+  background-color: green;
+}
