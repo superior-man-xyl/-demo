@@ -1,0 +1,18 @@
+/* pages/grid/display/display.wxss */
+.container1{
+  display: grid;/*启动网格布局，写一个九宫格*/
+  grid-template-columns: 100rpx 100rpx 100rpx;/*每列宽度*/
+}
+.container2{
+  display: inline-grid;/*启动网格布局，容器作为内联元素写一个九宫格*/
+  grid-template-columns: 100rpx 100rpx 100rpx;/*每列宽度*/
+}
+.item{
+  height: 100rpx;
+}
+.item:nth-child(odd){
+  background-color: red;
+}
+.item:nth-child(even){
+  background-color: green;
+}

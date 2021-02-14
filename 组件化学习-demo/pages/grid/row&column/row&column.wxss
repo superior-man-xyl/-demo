@@ -1,0 +1,15 @@
+/* pages/grid/row&column/row&column.wxss */
+.container {
+  display: grid;
+  grid-template-columns:100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+}
+.item{
+  height: 100rpx;
+}
+.item:nth-child(odd){
+  background-color: red;
+}
+.item:nth-child(even){
+  background-color: green;
+}

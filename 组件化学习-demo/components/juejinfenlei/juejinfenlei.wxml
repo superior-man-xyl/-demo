@@ -1,0 +1,4 @@
+<!--components/juejinfenlei/juejinfenlei.wxml-->
+<view class="container">
+  <view class="items" wx:for="{{fenlei}}" wx:key="id">{{item.name}}</view>
+</view>

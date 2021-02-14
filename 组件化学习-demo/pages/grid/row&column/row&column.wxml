@@ -1,0 +1,13 @@
+<!--pages/grid/row&column/row&column.wxml-->
+<view class="container">
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+</view>
+

@@ -1,0 +1,8 @@
+/* components/juejinfenlei/juejinfenlei.wxss */
+.container{
+  height: 400px;
+  width: 400px;
+  display: flex;
+  background-color: gray;
+  flex-wrap: wrap;
+}

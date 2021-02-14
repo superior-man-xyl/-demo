@@ -1,0 +1,11 @@
+<!--pages/juejin/juejin.wxml-->
+<juejintabs tabs="{{tabs}}" binditemChange="handleItemChange" >
+  <juejingfenlei fenlei="{{fenlei[1]}}"></juejingfenlei>
+<block wx:if="{{tabs[1].isActive}}"><juejingfenlei fenlei="{{fenlei}}"></juejingfenlei></block>
+<block wx:if="{{tabs[2].isActive}}"><juejingfenlei fenlei="{{fenlei}}"></juejingfenlei></block>
+<block wx:if="{{tabs[3].isActive}}"><juejingfenlei fenlei="{{fenlei}}"></juejingfenlei></block>
+</juejintabs>
+<block wx:if="{{tabs[0].isActive}}"><juejingfenlei fenlei="{{fenlei[1]}}"></juejingfenlei></block>
+<block wx:if="{{tabs[1].isActive}}"><juejingfenlei fenlei="{{fenlei[2]}}"></juejingfenlei></block>
+<block wx:if="{{tabs[2].isActive}}"><juejingfenlei fenlei="{{fenlei}}"></juejingfenlei></block>
+<block wx:if="{{tabs[3].isActive}}"><juejingfenlei fenlei="{{fenlei}}"></juejingfenlei></block>

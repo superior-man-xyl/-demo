@@ -1,8 +1,11 @@
 {
   "pages": [
+     "pages/juejin/juejin",
     "pages/grid/grid",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/grid/display/display",
+   "pages/grid/row&column/row&column"
   ],
   "window": {
     "backgroundTextStyle": "light",

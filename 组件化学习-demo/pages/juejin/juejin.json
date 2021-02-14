@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "juejintabs":"../../components/juejintabs/juejintabs",
+    "juejinfenlei":"../../components/juejinfenlei/juejinfenlei"
+  }
+}

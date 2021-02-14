@@ -1,0 +1,28 @@
+<!--pages/grid/display/display.wxml-->
+<view>块级元素容器的前面</view>
+<view class="container1">
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+</view>
+<view>块级元素容器的后面</view>
+
+<text>内联元素容器前</text>
+<view class="container2">
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+  <view class="item"></view>
+</view>
+<text>内联元素容器后</text>
