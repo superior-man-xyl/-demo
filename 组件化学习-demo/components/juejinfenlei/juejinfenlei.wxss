@@ -1,8 +1,13 @@
 /* components/juejinfenlei/juejinfenlei.wxss */
 .container{
-  height: 400px;
-  width: 400px;
-  display: flex;
-  background-color: gray;
+  display: inline-flex;
+  background-color: rgb(244, 245, 245);
   flex-wrap: wrap;
+}
+.items{
+  background-color: #fff;
+  color:rgb(144, 145, 145);
+  margin: 10rpx 20rpx;
+  padding: 0 10rpx;
+  border-radius: 30rpx;
 }
