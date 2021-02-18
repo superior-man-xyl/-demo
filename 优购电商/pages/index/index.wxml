@@ -1,4 +1,4 @@
-<view>
-  首页
+<view class="search">
+<SearchInput></SearchInput>
 </view>
   
