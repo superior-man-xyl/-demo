@@ -1,0 +1,58 @@
+.index_search{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+/* 为了定位后占空间，不让下面元素上来 */
+.zero{
+    width: 100%;
+    height: 90rpx;
+  }
+.index_swiper swiper image{
+    width: 100%;
+    /*标签中写了这个属性 mode="widthFix" 所以不用管高度*/
+}
+.index_swiper swiper{
+    /* 因为轮播的图片是750px/340px，所以就使其与图片一样大小 */
+    width: 750rpx;
+    height: 340rpx;
+}
+
+.index_cate{
+    display: flex;
+    width: 100%;
+}
+.index_cate navigator{
+    flex: 1;
+    padding: 25rpx;
+    /* 使用padding挤占一些位置，使图片缩小，图片因为mode的设置，会随着宽度的变化而变化 */
+}
+.index_cate navigator image{
+    width: 100%;
+}
+
+.floor_title image{
+    width: 100%;
+}
+.floor_list{
+    overflow: hidden;
+    /* 清除浮动 */
+    padding: 10rpx 0;
+}
+.floor_list navigator{
+    float:left;
+    width: 33.33%;
+}
+.floor_list navigator image{
+    width: 100%;
+}
+.floor_list:nth-last-child(-n+4) image{
+    /* 第一张最大图的原图大小是 232px/386px
+    换算高度  232/386=33.33vw/(其小程序中高度) 得到高度为：55.4vw
+    我们要设置后四张图片高度为第一张的一半，为27.74vw */
+    height: 27.74vw;
+    border-left: 10rpx solid #fff;
+}
+.floor_list:nth-child(2),.floor_list:nth-child(3){
+    border-bottom: 10rpx solid #fff;
+}

@@ -1,4 +1,51 @@
-<view class="search">
+<view class="pyg_index">
+
+    <!-- 搜索框 -->
+<view class="index_search">
 <SearchInput></SearchInput>
+</view>
+<view class="zero">
+</view>
+
+<!-- 轮播图 -->
+<view class="index_swiper">
+<!-- swiper标签存在默认样式
+w/h : 100%  150px 
+一定要改高度，不能是死的高度-->
+<!-- image标签也存在默认样式 
+w/h ：320px 240px-->
+<swiper autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+<swiper-item wx:for="{{swiperList}}" wx:key="goods_id">
+    <navigator url="">
+        <image src="{{item.image_src}}" mode="widthFix" lazy-load="false" />
+    </navigator>
+</swiper-item>
+  </swiper>
+</view>
+
+<!-- 分类导航栏 -->
+<view class="index_cate">
+    <navigator url="" wx:for="{{catesList}}" wx:key="name">
+        <image src="{{item.image_src}}" mode="widthFix"/>    
+    </navigator>
+</view>
+
+<!-- 楼层 -->
+<view class="index_floor">
+    <view class="floor_group" wx:for="{{floorList}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+        <!-- 标题 -->
+        <view class="floor_title">
+            <image mode="widthFix" src="{{item1.floor_title.image_src}}"/>
+        </view>
+        <!-- 内容 -->
+        <view class="floor_list">
+            <navigator url="" wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name">
+                <!-- 为了第一张图片和后四张能区别设置 -->
+                <image src="{{item2.image_src}}" mode="{{index2===0?'widthFix':'scaleToFill'}}" />
+            </navigator>
+        </view>
+    </view>
+</view>
+
 </view>
   
