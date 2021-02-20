@@ -1,1 +1,42 @@
 /* pages/goods_list/goods_list.wxss */
+.search{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+/* 为了定位后占空间，不让下面元素上来 */
+.zero{
+    width: 100%;
+    height: 90rpx;
+}
+
+.first_tab .goods_item{
+    display: flex;
+    border-bottom: 2rpx solid #ccc;
+}
+.goods_image_wrap{
+    flex:2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goods_image_wrap image{
+    width: 70%;
+}
+.goods_info_wrap{
+    flex:3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.goods_info_name{
+    /* 设置文字的两行显示，和多出来的显示...的效果 */
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp: 2;
+}
+.goods_info_price{
+    color:var(--themeColor);
+    font-size: 32rpx;
+}
