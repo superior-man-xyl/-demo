@@ -7,17 +7,17 @@
 <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
     <block wx:if="{{tabs[0].isActive}}">
         <view class="first_tab">
-            <navigator class="goods_item">
+            <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="goods_item" wx:for="{{goodsList}}" wx:key="goods_id">
                 <!-- 左侧图片容器 -->
                 <view class="goods_image_wrap">
-                    <image src="" mode="widthFix"/>
+                    <image src="{{item.goods_small_logo?item.goods_small_logo:'http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000160455569_1_400x400.jpg'}}" mode="widthFix"/>
                 </view>
                 <!-- 右侧描述信息容器 -->
                 <view class="goods_info_wrap">
                     <!-- 商品名 -->
-                    <view class="goods_info_name"></view>
+                    <view class="goods_info_name">{{item.goods_name}}</view>
                     <!-- 商品价格 -->
-                    <view class="goods_info_price"></view>
+                    <view class="goods_info_price">￥{{item.goods_price}}</view>
                 </view>
             </navigator>
         </view>
