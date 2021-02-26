@@ -1,1 +1,102 @@
 /* pages/goods_detail/goods_detail.wxss */
+page{
+    padding-bottom: 90rpx;
+}
+.detail_swiper swiper{
+    height: 65vw;
+    /* 这里图片的原图长和宽都是1：1的 */
+    text-align: center;
+}
+.detail_swiper swiper image{
+    width: 62vw;
+}
+
+.goods_price{
+    padding: 15rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color:var(--themeColor)
+}
+.goods_name_row{
+    display: flex;
+    border-top: 5rpx solid #dedede;
+    border-bottom: 5rpx solid #dedede;
+    padding: 10rpx 0;
+}
+.goods_name{
+    flex:5;
+    color: #000;
+    font-size: 30rpx;
+    padding: 0 10rpx;
+     /* 设置文字的两行显示，和多出来的显示...的效果 */
+     display: -webkit-box;
+     overflow: hidden;
+     -webkit-box-orient:vertical;
+     -webkit-line-clamp: 2;
+}
+.goods_collect{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: 1rpx solid #000;
+}
+
+.goods_info_title{
+    padding: 29rpx;
+    font-weight: 600;
+    color: var(--themeColor);
+    font-size: 32rpx;
+}
+
+.btm_tool{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 90rpx;
+    background-color: #fff;
+    display: flex;
+}
+.tool_item{
+    /* 这里开启相对定位，按钮就能使用绝对定位了 */
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24rpx;
+}
+.btm_tool .tool_item button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 全透明 */
+    opacity: 0;
+  }
+.btn-cart{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffa500;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #fff;
+}
+.btn-buy{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eb4450;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: #fff;
+}
