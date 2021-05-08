@@ -16,6 +16,7 @@ export default class NavLeft extends React.Component {
   constructor(props) {
     super(props)
     const menuTreeNode = this.renderMenu(MenuConfig);
+    //菜单渲染，为menuTreeNode赋值
     this.state = {
       menuTreeNode
     }

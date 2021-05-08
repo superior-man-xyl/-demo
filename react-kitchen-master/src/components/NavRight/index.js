@@ -12,6 +12,7 @@ export default class NavRight extends React.Component {
 
   componentDidMount(){
     this.getTagAPIList()
+    //请求数据，并且将页面元素赋值到tagList
   }
   // 渲染标签列表
   renderTagList = (data) => {

@@ -1,32 +1,32 @@
-import React from 'react';
-import { Input, Menu, Avatar, Divider, Icon, Button } from 'antd';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { Input, Menu, Avatar, Divider, Icon, Button } from "antd";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import './index.less';
+import "./index.less";
 import { transmit } from "../../redux/actions";
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
 class Header extends React.Component {
   state = {
-    value: ''
-  }
+    value: "",
+  };
 
   static propTypes = {
-    transmit: PropTypes.func.isRequired
-  }
+    transmit: PropTypes.func.isRequired,
+    //使用prop-types来记录传递给组件的属性的预期类型,对其作类型检测，isRequired指必须有值
+  };
   // 获取Input框的value值
-  getInputValue = event => {
+  getInputValue = (event) => {
     let value = event.target.value;
     this.setState({
-      value
+      value,
     });
   };
   //菜谱搜索
   menuSearch = () => {
     let value = this.state.value;
-    this.props.transmit(value)
-
+    this.props.transmit(value);//transmit已经做好了映射，使用connect不用再dispatch
   };
 
   render() {
@@ -39,9 +39,9 @@ class Header extends React.Component {
             </NavLink>
           </div>
           <Input
-            style={{ width: '22%' }}
+            style={{ width: "22%" }}
             placeholder="搜索菜谱、食材"
-            onChange={event => this.getInputValue(event)}
+            onChange={(event) => this.getInputValue(event)}
             allowClear
             size="large"
           />
@@ -58,7 +58,6 @@ class Header extends React.Component {
 
           <div className="topbar-menu">
             <Menu mode="horizontal">
-
               <SubMenu
                 title={<span className="submenu-title-wrapper">菜谱分类</span>}
               >
@@ -66,22 +65,25 @@ class Header extends React.Component {
                 <MenuItemGroup title="常见食材" />
                 <MenuItemGroup title="时令食材" />
               </SubMenu>
-                <Menu.Item key="alipay">
+              <Menu.Item key="alipay">
                 <NavLink to="/topic">话题</NavLink>
-                </Menu.Item>
-              <Menu.Item key="mail"><NavLink to="/menu">菜单</NavLink></Menu.Item>
-              <Menu.Item key="app"><NavLink to="/collections">我的主页</NavLink></Menu.Item>
-
+              </Menu.Item>
+              <Menu.Item key="mail">
+                <NavLink to="/menu">菜单</NavLink>
+              </Menu.Item>
+              <Menu.Item key="app">
+                <NavLink to="/collections">我的主页</NavLink>
+              </Menu.Item>
             </Menu>
           </div>
           <div className="avatar">
-            <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>
+            <Avatar style={{ color: "#f56a00", backgroundColor: "#fde3cf" }}>
               U
             </Avatar>
             <Divider type="vertical" />
-              <NavLink to="/collections">
+            <NavLink to="/collections">
               <Icon type="book" style={{ fontSize: 25 }} />
-              </NavLink>
+            </NavLink>
           </div>
         </div>
       </div>
@@ -89,7 +91,4 @@ class Header extends React.Component {
   }
 }
 
-export default connect(
-  state => ({keyword: state}),
-  {transmit}
-)(Header)
+export default connect((state) => ({ keyword: state }), { transmit })(Header);

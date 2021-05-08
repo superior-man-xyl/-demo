@@ -16,19 +16,19 @@ export default class Collections extends React.Component {
 
   getCollectionList = () => {
     if (localStorage.length > 0) {
-      let menuList = []
-      for (let index = 0; index < localStorage.length; index++) {
-        const menuName = localStorage.key(index)
-        console.log(menuName);
-
-        let menu = JSON.parse(localStorage.getItem(menuName))
-        console.log(typeof menu);
-        menuList.push(this.renderMenuList(menu))
+        let menuList = []
+        for (let index = 0; index < localStorage.length; index++) {
+          if(JSON.parse(localStorage.getItem(localStorage.key(index))).id !== undefined){
+          const menuName = localStorage.key(index)
+          console.log(menuName,"xxxxxx");
+          let menu = JSON.parse(localStorage.getItem(menuName))
+          console.log(typeof menu);
+          menuList.push(this.renderMenuList(menu))
+          this.setState({
+            menuList
+          })
+        }
       }
-      this.setState({
-        menuList
-      })
-
     }
   }
 

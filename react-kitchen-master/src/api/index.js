@@ -1,4 +1,4 @@
-import JsonP from 'jsonp'
+import JsonP from 'jsonp'//使用第三方jsonp组件实现跨域
 import { message } from "antd";
 
 export default class Axios {
