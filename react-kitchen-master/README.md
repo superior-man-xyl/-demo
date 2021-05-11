@@ -12,14 +12,6 @@
 - react-redux
 - less
 
-## 预览图
-
-
-![](https://user-gold-cdn.xitu.io/2019/3/8/1695b731081662e4?w=1852&h=901&f=gif&s=4051977)
-
-![](https://user-gold-cdn.xitu.io/2019/3/8/1695b696f3140c0a?w=1852&h=906&f=gif&s=797019)
-
-![](https://user-gold-cdn.xitu.io/2019/3/8/1695b7529e0b58b2?w=1844&h=900&f=gif&s=696585)
 
 ## 基本项目搭建
 
@@ -257,11 +249,18 @@ handleCollect = () => {
 ```
 <div dangerouslySetInnerHTML={{__html: code}}></div>
 ```
-## 结语
 
-### [项目传送门](https://github.com/MrsignzZ/react-kitchen)
-写项目的时候也遇到了许多小问题，都是慢慢查文档一个一个解决的，不断的思考然后解决问题也是成长的一部分。
+## 项目搭建服务器
+由于是单页应用虚拟路由的原因，需要将nginx的所有请求都转发到index.html页面，所以需要修改配置文件，不然会有刷新后404问题。
 
-当然，项目还有许多需要完善的地方，如果发现有错误或者不足的地方，也希望大家能够指点一二
+启动nginx：
 
-**最后的最后，厚颜无耻地求一个STAR😋**
+systemctl start nginx
+
+关闭nginx：
+
+systemctl stop nginx
+
+重启nginx：
+
+systemctl reload nginx
