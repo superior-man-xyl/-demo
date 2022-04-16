@@ -1,0 +1,15 @@
+{
+    // "presets": [//presets代表其支持的语法，因为各种语法特别多，es678,jsx,所以要指定
+    //     ["es2015",{"loose":true}],//loose表示其是松散的
+    //     "react"
+    // ] 老的，过时的配置
+
+    "presets": [
+            "@babel/preset-env",
+            "@babel/preset-react"
+    ]
+    // "plugins": [
+    //     "@babel/plugin-transform-runtime"
+    // ]
+    
+}
