@@ -5,11 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config build/webpack.config.js"
+    "build:client": "webpack --config build/webpack.config.client.js",
+    "build:server": "webpack --config build/webpack.config.server.js",
+    "build": "npm run build:client && npm run build:server",
+    "start": "node server/server.js"
   },
   "author": "xyl",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "webpack": "^5.72.0"
@@ -25,7 +29,9 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-es2015-loose": "^8.0.0",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
+    "rimraf": "^3.0.2",
     "webpack-cli": "^4.9.2"
   }
 }

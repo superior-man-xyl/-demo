@@ -1,5 +1,7 @@
 # 不使用脚手架工具构建项目的过程
 
+## webpack基础配置过程
+
 - npm init 初始化项目，生成 package.json 文件
 
 - npm i webpack 安装 webpack
@@ -30,3 +32,19 @@
 - 接着设置使用浏览器打开, npm i html-webpack-plugin -D, 下载html-webpack-plugin,该插件将为你生成一个 HTML5 文件， 其中包括使用 script 标签的 body 中的所有 webpack 包。
 
 - 但是，上面的是旧版本的babel了要进行更新，npm i @babel/core babel-loader @babel/preset-env @babel/preset-react @babel/plugin-transform-runtime -D，使用新版本的babel
+
+## 服务端渲染基础配置
+
+- 在client里创建一个server.entry.js, 写入代码，主要是引入App.js的内容，也是获得将来服务端推送到服务器内容的关键
+
+- 在build下创建webpack.config.server.js, 进行server的打包的配置
+
+- 在package.json下创建命令，对之前client的webpack配置文件加上client的后缀，以和server区分，接着分别创建client端和server端的build命令脚本
+
+- 创建clear，以在重新build时能删除原来的dist，下载一个删除文件的包，npm i rimraf -D, 接着编辑一个build脚本，使其一起执行三个操作, 但是因为现在rimraf不太能用了，就是用了个plugin，npm i clean-webpack-plugin -D
+
+- 新键一个server文件夹，做服务端渲染的事，接着下载express，使用express来编写
+
+- 将server启动的命令也放到package.json里，写一个start命令
+
+- 在server下建立server.js，并在client下建立template.html模板html, 用于更加规范的挂载react, 并且使得server.js里对template进行操作，将服务端获得的react页面内容替换到模板html上，并发给浏览器
